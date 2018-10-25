@@ -1,8 +1,12 @@
+<h1><%= link_to "All Songs", songs_path %></h1>
+
 <h2><%= @artist.name %></h2>
 
 <% if !@songs.empty? %>
   <% @songs.each do |song| %>
     <%= song.title %>
-    <%= song.length %>
+    <li>Length: <%= song.length %></li>
+    <li>Play Count: <%= song.play_count %></li>
+    <br>
   <% end %>
 <% end %>

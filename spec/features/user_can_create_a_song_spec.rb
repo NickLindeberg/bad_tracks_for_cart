@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe 'user can create a song' do
   it 'through an artist' do
-    artist = Artist.create(name: "Weird Al")
+    artist = create(:artist)
 
     visit new_artist_song_path(artist)
 

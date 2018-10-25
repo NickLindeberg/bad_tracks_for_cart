@@ -2,5 +2,10 @@
 
 <% @songs.each do |song| %>
  <%=song.title %>
+ <li>Artist: <%= link_to "#{song.artist.name}", artist_path(song.artist) %></li>
  <li>Plays: <%= song.play_count %></li>
+ <li>Length: <%= song.length %></li>
+ <%= button_to "Add Song", carts_path(song_id: song.id), class: "btn btn-danger" %>
+
+ <br>
 <% end %>
